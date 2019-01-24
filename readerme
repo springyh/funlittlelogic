@@ -1,0 +1,23 @@
+1.使用键盘录入,猜想数字,先使用随机数产生一个数字,然后去猜想,根据结果,打印出是大了还是小了
+程序如下:
+import java.util.*;
+class MathDemo2 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("请输入一个整数,范围在1-100之间");
+		int guessNum =(int)(Math.random()*100)+1; //需要猜的数
+		while(true){
+			int result = sc.nextInt(); //我们在答的数
+			if(result >guessNum){
+				System.out.println("大了");
+			}else if(result <guessNum){
+				System.out.println("小了");
+			}else{
+				System.out.println("中了");
+				break;
+			}
+		}
+	}
+}
